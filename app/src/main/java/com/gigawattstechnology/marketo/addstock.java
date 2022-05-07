@@ -45,7 +45,7 @@ long maxentry=0;
         stockitem=findViewById(R.id.item);
         list=findViewById(R.id.list);
         context=this;
-        databaseReference= FirebaseDatabase.getInstance().getReference(authtransfer.givesupermarket()).child(authtransfer.giveaddress().replace(",","").replace(" ","").replace("/","")).child("Added Stock");
+        databaseReference= FirebaseDatabase.getInstance().getReference(authtransfer.givesupermarket()).child(authtransfer.giveaddress().replace(",","").replace(" ","").replace("/","")).child("Stock");
         addmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -86,7 +86,8 @@ long maxentry=0;
                 }
                 for(int i=1;i<item.size();i++){
                     long p=maxentry+i;
-                    databaseReference.child("item"+p).setValue(item.get(i));
+                    databaseReference.child("item"+p).child("itemname").setValue(item.get(i));
+                    databaseReference.child("item"+p).child("itemhead").setValue("item"+p);
                 }
             }
         });
