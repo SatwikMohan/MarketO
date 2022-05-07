@@ -45,7 +45,7 @@ long maxentry=0;
         stockitem=findViewById(R.id.item);
         list=findViewById(R.id.list);
         context=this;
-        databaseReference= FirebaseDatabase.getInstance().getReference(authtransfer.givesupermarket()).child(authtransfer.giveaddress().replace(",","").replace(" ","").replace("/","")).child("Stock");
+        databaseReference= FirebaseDatabase.getInstance().getReference(authtransfer.givesupermarket()).child(authtransfer.giveaddress().replace(",","").replace(" ","").replace("/","")).child("Added Stock");
         addmore.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
