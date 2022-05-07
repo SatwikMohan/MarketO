@@ -13,5 +13,6 @@ public class removestock extends AppCompatActivity {
         setContentView(R.layout.activity_removestock);
         this.setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         getSupportActionBar().hide();
+
     }
 }
