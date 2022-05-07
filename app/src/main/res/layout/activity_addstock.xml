@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFFFFF"
+    tools:context=".addstock"
+    android:orientation="vertical"
+    android:id="@+id/list">
+<LinearLayout
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <EditText
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:hint="Stock item"
+        android:textColor="#000000"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:layout_marginLeft="40dp"
+        android:id="@+id/item"/>
+    <include
+        layout="@layout/additem"
+        >
+
+
+    </include>
+
+</LinearLayout>
+
+<com.google.android.material.floatingactionbutton.FloatingActionButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:src="@android:drawable/ic_input_add"
+    android:layout_marginLeft="260dp"
+    android:layout_marginTop="30dp"
+    android:id="@+id/addmore"
+    />
+<Button
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:text="Add to Stock"
+    android:backgroundTint="@color/teal_200"
+    android:id="@+id/addtostock"
+    android:layout_marginLeft="100dp"/>
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
