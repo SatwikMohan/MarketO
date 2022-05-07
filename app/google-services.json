@@ -1,0 +1,69 @@
+{
+  "project_info": {
+    "project_number": "521482131636",
+    "firebase_url": "https://marketo-e18cc-default-rtdb.firebaseio.com",
+    "project_id": "marketo-e18cc",
+    "storage_bucket": "marketo-e18cc.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521482131636:android:e30531e8eb483105a29fe1",
+        "android_client_info": {
+          "package_name": "com.gigawattstechnology.customer_side"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521482131636-ov4h52vr1fb4kol1o68vjdk1m2gpju93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiM5WLoEMXPYuwyWfnuiuk-qWfqlePXyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521482131636-ov4h52vr1fb4kol1o68vjdk1m2gpju93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:521482131636:android:0b8ff1a8913ea2c1a29fe1",
+        "android_client_info": {
+          "package_name": "com.gigawattstechnology.marketo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "521482131636-ov4h52vr1fb4kol1o68vjdk1m2gpju93.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDiM5WLoEMXPYuwyWfnuiuk-qWfqlePXyo"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "521482131636-ov4h52vr1fb4kol1o68vjdk1m2gpju93.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
