@@ -1,5 +1,6 @@
 package com.gigawattstechnology.customer_side;
 
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -13,6 +14,7 @@ import android.view.ViewGroup;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -29,12 +31,14 @@ DatabaseReference databaseReference;
 RecyclerView recyclerView;
 long max;
 ArrayList<String> itemname=new ArrayList<>();
+FloatingActionButton createlist;
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_unavailablestocktab, container, false);
         unavail=view.findViewById(R.id.unavail);
+        createlist=view.findViewById(R.id.createlist);
         recyclerView=view.findViewById(R.id.recyclerunavailable);
         databaseReference= FirebaseDatabase.getInstance().getReference("Big Bazar").child("Delhigateagra").child("Removed Stock");
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -42,7 +46,6 @@ ArrayList<String> itemname=new ArrayList<>();
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 max=snapshot.getChildrenCount();
                 //Toast.makeText(getContext(), ""+max, Toast.LENGTH_SHORT).show();
-
             }
 
             @Override
@@ -72,6 +75,12 @@ ArrayList<String> itemname=new ArrayList<>();
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         Unavail unavail=new Unavail(in);
         recyclerView.setAdapter(unavail);
+        createlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i=new Intent(getContext(),shopping.class);
+            }
+        });
         return view;
     }
 }

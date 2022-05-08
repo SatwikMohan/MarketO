@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Customerside">
         <activity
+            android:name=".shopping"
+            android:exported="false" />
+        <activity
             android:name=".Market"
             android:exported="false" />
         <activity
