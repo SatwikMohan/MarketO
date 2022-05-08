@@ -4,6 +4,8 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.recyclerview.widget.LinearLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -17,16 +19,23 @@ import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
+import java.util.ArrayList;
+import java.util.HashSet;
+import java.util.Set;
+
 public class unavailablestocktab extends Fragment {
 TextView unavail;
 DatabaseReference databaseReference;
+RecyclerView recyclerView;
 long max;
+ArrayList<String> itemname=new ArrayList<>();
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_unavailablestocktab, container, false);
         unavail=view.findViewById(R.id.unavail);
+        recyclerView=view.findViewById(R.id.recyclerunavailable);
         databaseReference= FirebaseDatabase.getInstance().getReference("Big Bazar").child("Delhigateagra").child("Removed Stock");
         databaseReference.addValueEventListener(new ValueEventListener() {
             @Override
@@ -47,7 +56,8 @@ long max;
                 @Override
                 public void onDataChange(@NonNull DataSnapshot snapshot) {
                     if(snapshot.getValue(String.class)!=null)
-                    unavail.append(snapshot.getValue(String.class)+"\n");
+                        itemname.add(snapshot.getValue(String.class));
+                   // unavail.append(snapshot.getValue(String.class)+"\n");
                     //Toast.makeText(getContext(), snapshot.getValue(String.class), Toast.LENGTH_SHORT).show();
                 }
 
@@ -57,6 +67,11 @@ long max;
                 }
             });
         }
+        Set<String> in=new HashSet<>(itemname);
+        recyclerView.setHasFixedSize(true);
+        recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
+        Unavail unavail=new Unavail(in);
+        recyclerView.setAdapter(unavail);
         return view;
     }
 }
