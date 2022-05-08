@@ -22,6 +22,7 @@
         android:text="-"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="80dp"
+        android:onClick="decrement"
         />
     <TextView
         android:id="@+id/quantity"
@@ -40,6 +41,16 @@
         android:text="+"
         android:layout_marginTop="80dp"
         android:layout_marginLeft="240dp"
+        android:onClick="increment"
+        />
+    <Button
+        android:id="@+id/save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="save"
+        android:layout_marginTop="20dp"
+        android:layout_marginLeft="240dp"
+        android:onClick="save"
         />
 
 </androidx.cardview.widget.CardView>

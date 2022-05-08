@@ -10,7 +10,9 @@
         <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/activity_stock.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/fragment_availablestocktab.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/fragment_unavailablestocktab.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/recycler_market.xml" value="0.22826086956521738" />
         <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/recyclerview_availablestock.xml" value="0.22826086956521738" />
+        <entry key="..\:/Users/Satwik Mohan/AndroidStudioProjects/customerside/app/src/main/res/layout/recyclerview_unavailablestock.xml" value="0.22826086956521738" />
       </map>
     </option>
   </component>
