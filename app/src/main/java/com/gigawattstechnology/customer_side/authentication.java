@@ -79,7 +79,7 @@ public class authentication extends AppCompatActivity {
                         if(task.isSuccessful())
                         {
                             Toast.makeText(authentication.this,email.substring(0,email.indexOf("@"))+" is Successfully Logged IN",Toast.LENGTH_SHORT).show();
-                            Intent i=new Intent(authentication.this,stock.class);
+                            Intent i=new Intent(authentication.this,Market.class);
                             i.putExtra("profile",email.substring(0,email.indexOf("@")));
                             startActivity(i);
 

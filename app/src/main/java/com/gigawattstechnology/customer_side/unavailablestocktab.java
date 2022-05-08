@@ -38,7 +38,7 @@ FloatingActionButton createlist;
         // Inflate the layout for this fragment
         View view=inflater.inflate(R.layout.fragment_unavailablestocktab, container, false);
         unavail=view.findViewById(R.id.unavail);
-        createlist=view.findViewById(R.id.createlist);
+        //createlist=view.findViewById(R.id.createlist);
         recyclerView=view.findViewById(R.id.recyclerunavailable);
         databaseReference= FirebaseDatabase.getInstance().getReference("Big Bazar").child("Delhigateagra").child("Removed Stock");
         databaseReference.addValueEventListener(new ValueEventListener() {
@@ -75,12 +75,12 @@ FloatingActionButton createlist;
         recyclerView.setLayoutManager(new LinearLayoutManager(view.getContext()));
         Unavail unavail=new Unavail(in);
         recyclerView.setAdapter(unavail);
-        createlist.setOnClickListener(new View.OnClickListener() {
+        /*createlist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 Intent i=new Intent(getContext(),shopping.class);
             }
-        });
+        });*/
         return view;
     }
 }
